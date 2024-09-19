@@ -26,6 +26,12 @@ def index(request):
 def about(request):
     return render(request, 'shop/about.html')
 def contact(request):
+    if request.method=="POST":
+        print(request)
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        phone = request.POST.get('name', '')
+        desc =
     return render(request, 'shop/contact.html')
 def tracker(request):
     return render(request, 'shop/tracker.html')
